@@ -86,6 +86,60 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2018/07/11/ubuntu修复指南/" title="ubuntu修复指南" itemprop="url">ubuntu修复指南</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="QueenSAD" target="_blank" itemprop="author">QueenSAD</a>
+		
+  <p class="article-time">
+    <time datetime="2018-07-11T01:25:37.000Z" itemprop="datePublished"> 发表于 2018-07-11</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h1 id="ubuntu修复指南"><a href="#ubuntu修复指南" class="headerlink" title="ubuntu修复指南"></a>ubuntu修复指南</h1><h2 id="软件安装类"><a href="#软件安装类" class="headerlink" title="软件安装类"></a>软件安装类</h2><h3 id="出现Could-not-get-lock-var-lib-dpkg-lock解决"><a href="#出现Could-not-get-lock-var-lib-dpkg-lock解决" class="headerlink" title="出现Could not get lock /var/lib/dpkg/lock解决"></a>出现Could not get lock /var/lib/dpkg/lock解决</h3><p>运行下列语句即可解决</p>
+<pre><code class="shell">sudo rm /var/cache/apt/archives/lock
+sudo rm /var/lib/dpkg/lock
+sudo dpkg --configure -a
+</code></pre>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2018/07/10/添加hexo站内搜索的正确姿势/" title="添加hexo站内搜索的正确姿势" itemprop="url">添加hexo站内搜索的正确姿势</a>
   </h1>
   <p class="article-author">By
@@ -307,6 +361,7 @@
 		
 		
 		</p>
+		
 </div>
 </footer>
     <script src="/js/jquery-2.0.3.min.js"></script>

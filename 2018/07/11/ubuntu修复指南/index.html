@@ -4,25 +4,24 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Python数据处理 | ScienceFantasy</title>
+    <title>ubuntu修复指南 | ScienceFantasy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="QueenSAD">
     
 
     
-    <meta name="description" content="#Python数据处理 文件遍历用os.walk()比较方便 示例代码：123456789101112import osworkdir=&apos;./Data/&apos;for root,dirnames,filenames in os.walk(workdir):    for name in filenames:        filepath=os.path.join(root,name)#获取文件完整路径">
-<meta name="keywords" content="python">
+    <meta name="description" content="ubuntu修复指南软件安装类出现Could not get lock /var/lib/dpkg/lock解决运行下列语句即可解决 sudo rm /var/cache/apt/archives/lock sudo rm /var/lib/dpkg/lock sudo dpkg --configure -a">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python数据处理">
-<meta property="og:url" content="http://yoursite.com/2018/07/10/Python数据处理/index.html">
+<meta property="og:title" content="ubuntu修复指南">
+<meta property="og:url" content="http://yoursite.com/2018/07/11/ubuntu修复指南/index.html">
 <meta property="og:site_name" content="ScienceFantasy">
-<meta property="og:description" content="#Python数据处理 文件遍历用os.walk()比较方便 示例代码：123456789101112import osworkdir=&apos;./Data/&apos;for root,dirnames,filenames in os.walk(workdir):    for name in filenames:        filepath=os.path.join(root,name)#获取文件完整路径">
+<meta property="og:description" content="ubuntu修复指南软件安装类出现Could not get lock /var/lib/dpkg/lock解决运行下列语句即可解决 sudo rm /var/cache/apt/archives/lock sudo rm /var/lib/dpkg/lock sudo dpkg --configure -a">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-10T11:05:52.085Z">
+<meta property="og:updated_time" content="2018-07-11T01:28:33.206Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python数据处理">
-<meta name="twitter:description" content="#Python数据处理 文件遍历用os.walk()比较方便 示例代码：123456789101112import osworkdir=&apos;./Data/&apos;for root,dirnames,filenames in os.walk(workdir):    for name in filenames:        filepath=os.path.join(root,name)#获取文件完整路径">
+<meta name="twitter:title" content="ubuntu修复指南">
+<meta name="twitter:description" content="ubuntu修复指南软件安装类出现Could not get lock /var/lib/dpkg/lock解决运行下列语句即可解决 sudo rm /var/cache/apt/archives/lock sudo rm /var/lib/dpkg/lock sudo dpkg --configure -a">
 
     
     <link rel="alternative" href="/atom.xml" title="ScienceFantasy" type="application/atom+xml">
@@ -89,14 +88,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2018/07/10/Python数据处理/" title="Python数据处理" itemprop="url">Python数据处理</a>
+      <a href="/2018/07/11/ubuntu修复指南/" title="ubuntu修复指南" itemprop="url">ubuntu修复指南</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="QueenSAD" target="_blank" itemprop="author">QueenSAD</a>
 		
   <p class="article-time">
-    <time datetime="2018-07-10T08:12:54.000Z" itemprop="datePublished"> 发表于 2018-07-10</time>
+    <time datetime="2018-07-11T01:25:37.000Z" itemprop="datePublished"> 发表于 2018-07-11</time>
     
   </p>
 </header>
@@ -105,25 +104,20 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#文件遍历"><span class="toc-number">1.</span> <span class="toc-text">文件遍历</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文件名序列化"><span class="toc-number">2.</span> <span class="toc-text">文件名序列化</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#ubuntu修复指南"><span class="toc-number">1.</span> <span class="toc-text">ubuntu修复指南</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#软件安装类"><span class="toc-number">1.1.</span> <span class="toc-text">软件安装类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#出现Could-not-get-lock-var-lib-dpkg-lock解决"><span class="toc-number">1.1.1.</span> <span class="toc-text">出现Could not get lock /var/lib/dpkg/lock解决</span></a></li></ol></li></ol></li></ol>
 		
 		</div>
 		
-		<p>#Python数据处理</p>
-<h2 id="文件遍历"><a href="#文件遍历" class="headerlink" title="文件遍历"></a>文件遍历</h2><p>用os.walk()比较方便</p>
-<p>示例代码：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line">workdir=<span class="string">'./Data/'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> root,dirnames,filenames <span class="keyword">in</span> os.walk(workdir):</span><br><span class="line">    <span class="keyword">for</span> name <span class="keyword">in</span> filenames:</span><br><span class="line">        filepath=os.path.join(root,name)<span class="comment">#获取文件完整路径</span></span><br><span class="line">        print(filepath)<span class="comment">#得到路径后就可以进行各种处理啦</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">#同理可对文件夹进行处理</span></span><br><span class="line">    <span class="keyword">for</span> name <span class="keyword">in</span> dirnames:</span><br><span class="line">        dirpath=os.path.join(root,name)<span class="comment">#获取目录完整路径</span></span><br><span class="line">        print(dirpath)<span class="comment">#得到路径后就可以进行各种处理啦</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="文件名序列化"><a href="#文件名序列化" class="headerlink" title="文件名序列化"></a>文件名序列化</h2><p>可以用str.zfill()的填充0</p>
-<p>示例代码<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="comment">#批量重命名文件</span></span><br><span class="line">workdir=<span class="string">'./Data/'</span></span><br><span class="line">tag=<span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> root,dirnames,filenames <span class="keyword">in</span> os.walk(workdir):</span><br><span class="line">    <span class="keyword">for</span> name <span class="keyword">in</span> filenames:</span><br><span class="line">        filepath=os.path.join(root,name)</span><br><span class="line">        newname=os.path.join(root,str(tag).zfill(<span class="number">6</span>)+<span class="string">".jpeg"</span>)</span><br><span class="line">        os.rename(filepath,newname)</span><br><span class="line">        tag+=<span class="number">1</span></span><br></pre></td></tr></table></figure></p>
+		<h1 id="ubuntu修复指南"><a href="#ubuntu修复指南" class="headerlink" title="ubuntu修复指南"></a>ubuntu修复指南</h1><h2 id="软件安装类"><a href="#软件安装类" class="headerlink" title="软件安装类"></a>软件安装类</h2><h3 id="出现Could-not-get-lock-var-lib-dpkg-lock解决"><a href="#出现Could-not-get-lock-var-lib-dpkg-lock解决" class="headerlink" title="出现Could not get lock /var/lib/dpkg/lock解决"></a>出现Could not get lock /var/lib/dpkg/lock解决</h3><p>运行下列语句即可解决</p>
+<pre><code class="shell">sudo rm /var/cache/apt/archives/lock
+sudo rm /var/lib/dpkg/lock
+sudo dpkg --configure -a
+</code></pre>
   
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/python/">python</a>
-  </div>
 
 </div>
 
@@ -131,7 +125,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2018/07/10/Python数据处理/" data-title="Python数据处理 | ScienceFantasy" data-tsina="" class="share clearfix">
+	  <div data-url="http://yoursite.com/2018/07/11/ubuntu修复指南/" data-title="ubuntu修复指南 | ScienceFantasy" data-tsina="" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -144,14 +138,14 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2018/07/10/添加hexo站内搜索的正确姿势/" title="添加hexo站内搜索的正确姿势">
-  <strong>上一篇：</strong><br/>
-  <span>
-  添加hexo站内搜索的正确姿势</span>
+
+<div class="next">
+<a href="/2018/07/10/添加hexo站内搜索的正确姿势/"  title="添加hexo站内搜索的正确姿势">
+ <strong>下一篇：</strong><br/> 
+ <span>添加hexo站内搜索的正确姿势
+</span>
 </a>
 </div>
-
 
 </nav>
 
@@ -165,7 +159,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#文件遍历"><span class="toc-number">1.</span> <span class="toc-text">文件遍历</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文件名序列化"><span class="toc-number">2.</span> <span class="toc-text">文件名序列化</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#ubuntu修复指南"><span class="toc-number">1.</span> <span class="toc-text">ubuntu修复指南</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#软件安装类"><span class="toc-number">1.1.</span> <span class="toc-text">软件安装类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#出现Could-not-get-lock-var-lib-dpkg-lock解决"><span class="toc-number">1.1.1.</span> <span class="toc-text">出现Could not get lock /var/lib/dpkg/lock解决</span></a></li></ol></li></ol></li></ol>
  
   </div>
 
