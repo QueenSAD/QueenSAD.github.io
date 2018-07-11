@@ -99,11 +99,8 @@
 </header>
     <div class="article-content">
         
-        <h1 id="ubuntu修复指南"><a href="#ubuntu修复指南" class="headerlink" title="ubuntu修复指南"></a>ubuntu修复指南</h1><h2 id="软件安装类"><a href="#软件安装类" class="headerlink" title="软件安装类"></a>软件安装类</h2><h3 id="出现Could-not-get-lock-var-lib-dpkg-lock解决"><a href="#出现Could-not-get-lock-var-lib-dpkg-lock解决" class="headerlink" title="出现Could not get lock /var/lib/dpkg/lock解决"></a>出现Could not get lock /var/lib/dpkg/lock解决</h3><p>运行下列语句即可解决</p>
-<pre><code class="shell">sudo rm /var/cache/apt/archives/lock
-sudo rm /var/lib/dpkg/lock
-sudo dpkg --configure -a
-</code></pre>
+        <h1 id="ubuntu修复指南"><a href="#ubuntu修复指南" class="headerlink" title="ubuntu修复指南"></a>ubuntu修复指南</h1><h2 id="软件安装类"><a href="#软件安装类" class="headerlink" title="软件安装类"></a>软件安装类</h2><h3 id="出现Could-not-get-lock-var-lib-dpkg-lock解决"><a href="#出现Could-not-get-lock-var-lib-dpkg-lock解决" class="headerlink" title="出现Could not get lock /var/lib/dpkg/lock解决"></a>出现Could not get lock /var/lib/dpkg/lock解决</h3><p>运行下列语句即可解决<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo rm /var/cache/apt/archives/lock</span><br><span class="line">sudo rm /var/lib/dpkg/lock</span><br><span class="line">sudo dpkg --configure -a</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>## 出现缺少依赖关系解决</span><br><span class="line">执行下列语句后再安装</span><br></pre></td></tr></table></figure></p>
+<p>sudo apt-get -f install<br><code>`</code></p>
 
         
         
