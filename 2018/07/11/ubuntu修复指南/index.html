@@ -11,18 +11,18 @@
     
 
     
-    <meta name="description" content="ubuntu修复指南软件安装类出现Could not get lock /var/lib/dpkg/lock解决运行下列语句即可解决 123sudo rm /var/cache/apt/archives/locksudo rm /var/lib/dpkg/locksudo dpkg --configure -a 出现缺少依赖关系解决执行下列语句后再安装 1sudo apt-get -f insta">
+    <meta name="description" content="软件安装类出现Could not get lock /var/lib/dpkg/lock解决运行下列语句即可解决 123sudo rm /var/cache/apt/archives/locksudo rm /var/lib/dpkg/locksudo dpkg --configure -a 出现缺少依赖关系解决执行下列语句后再安装 1sudo apt-get -f install">
 <meta name="keywords" content="ubuntu,linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ubuntu修复指南">
 <meta property="og:url" content="http://yoursite.com/2018/07/11/ubuntu修复指南/index.html">
 <meta property="og:site_name" content="ScienceFantasy">
-<meta property="og:description" content="ubuntu修复指南软件安装类出现Could not get lock /var/lib/dpkg/lock解决运行下列语句即可解决 123sudo rm /var/cache/apt/archives/locksudo rm /var/lib/dpkg/locksudo dpkg --configure -a 出现缺少依赖关系解决执行下列语句后再安装 1sudo apt-get -f insta">
+<meta property="og:description" content="软件安装类出现Could not get lock /var/lib/dpkg/lock解决运行下列语句即可解决 123sudo rm /var/cache/apt/archives/locksudo rm /var/lib/dpkg/locksudo dpkg --configure -a 出现缺少依赖关系解决执行下列语句后再安装 1sudo apt-get -f install">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-11T03:14:44.724Z">
+<meta property="og:updated_time" content="2018-07-12T01:23:33.006Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ubuntu修复指南">
-<meta name="twitter:description" content="ubuntu修复指南软件安装类出现Could not get lock /var/lib/dpkg/lock解决运行下列语句即可解决 123sudo rm /var/cache/apt/archives/locksudo rm /var/lib/dpkg/locksudo dpkg --configure -a 出现缺少依赖关系解决执行下列语句后再安装 1sudo apt-get -f insta">
+<meta name="twitter:description" content="软件安装类出现Could not get lock /var/lib/dpkg/lock解决运行下列语句即可解决 123sudo rm /var/cache/apt/archives/locksudo rm /var/lib/dpkg/locksudo dpkg --configure -a 出现缺少依赖关系解决执行下列语句后再安装 1sudo apt-get -f install">
 
     
     <link rel="alternative" href="/atom.xml" title="ScienceFantasy" type="application/atom+xml">
@@ -105,13 +105,13 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#ubuntu修复指南"><span class="toc-number">1.</span> <span class="toc-text">ubuntu修复指南</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#软件安装类"><span class="toc-number">1.1.</span> <span class="toc-text">软件安装类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#出现Could-not-get-lock-var-lib-dpkg-lock解决"><span class="toc-number">1.1.1.</span> <span class="toc-text">出现Could not get lock /var/lib/dpkg/lock解决</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#出现缺少依赖关系解决"><span class="toc-number">1.1.2.</span> <span class="toc-text">出现缺少依赖关系解决</span></a></li></ol></li></ol></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#软件安装类"><span class="toc-number">1.</span> <span class="toc-text">软件安装类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#出现Could-not-get-lock-var-lib-dpkg-lock解决"><span class="toc-number">1.1.</span> <span class="toc-text">出现Could not get lock /var/lib/dpkg/lock解决</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#出现缺少依赖关系解决"><span class="toc-number">1.2.</span> <span class="toc-text">出现缺少依赖关系解决</span></a></li></ol></li></ol>
 		
 		</div>
 		
-		<h1 id="ubuntu修复指南"><a href="#ubuntu修复指南" class="headerlink" title="ubuntu修复指南"></a>ubuntu修复指南</h1><h2 id="软件安装类"><a href="#软件安装类" class="headerlink" title="软件安装类"></a>软件安装类</h2><h3 id="出现Could-not-get-lock-var-lib-dpkg-lock解决"><a href="#出现Could-not-get-lock-var-lib-dpkg-lock解决" class="headerlink" title="出现Could not get lock /var/lib/dpkg/lock解决"></a>出现Could not get lock /var/lib/dpkg/lock解决</h3><p>运行下列语句即可解决</p>
+		<h1 id="软件安装类"><a href="#软件安装类" class="headerlink" title="软件安装类"></a>软件安装类</h1><h2 id="出现Could-not-get-lock-var-lib-dpkg-lock解决"><a href="#出现Could-not-get-lock-var-lib-dpkg-lock解决" class="headerlink" title="出现Could not get lock /var/lib/dpkg/lock解决"></a>出现Could not get lock /var/lib/dpkg/lock解决</h2><p>运行下列语句即可解决</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo rm /var/cache/apt/archives/lock</span><br><span class="line">sudo rm /var/lib/dpkg/lock</span><br><span class="line">sudo dpkg --configure -a</span><br></pre></td></tr></table></figure>
-<h3 id="出现缺少依赖关系解决"><a href="#出现缺少依赖关系解决" class="headerlink" title="出现缺少依赖关系解决"></a>出现缺少依赖关系解决</h3><p>执行下列语句后再安装</p>
+<h2 id="出现缺少依赖关系解决"><a href="#出现缺少依赖关系解决" class="headerlink" title="出现缺少依赖关系解决"></a>出现缺少依赖关系解决</h2><p>执行下列语句后再安装</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get -f install</span><br></pre></td></tr></table></figure>  
 	</div>
 		<footer class="article-footer clearfix">
@@ -163,7 +163,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#ubuntu修复指南"><span class="toc-number">1.</span> <span class="toc-text">ubuntu修复指南</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#软件安装类"><span class="toc-number">1.1.</span> <span class="toc-text">软件安装类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#出现Could-not-get-lock-var-lib-dpkg-lock解决"><span class="toc-number">1.1.1.</span> <span class="toc-text">出现Could not get lock /var/lib/dpkg/lock解决</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#出现缺少依赖关系解决"><span class="toc-number">1.1.2.</span> <span class="toc-text">出现缺少依赖关系解决</span></a></li></ol></li></ol></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#软件安装类"><span class="toc-number">1.</span> <span class="toc-text">软件安装类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#出现Could-not-get-lock-var-lib-dpkg-lock解决"><span class="toc-number">1.1.</span> <span class="toc-text">出现Could not get lock /var/lib/dpkg/lock解决</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#出现缺少依赖关系解决"><span class="toc-number">1.2.</span> <span class="toc-text">出现缺少依赖关系解决</span></a></li></ol></li></ol>
  
   </div>
 
