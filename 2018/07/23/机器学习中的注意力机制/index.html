@@ -4,25 +4,28 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>ubuntu修复指南 | ScienceFantasy</title>
+    <title>机器学习中的注意力机制 | ScienceFantasy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="QueenSAD">
     
 
     
-    <meta name="description" content="软件安装类出现Could not get lock /var/lib/dpkg/lock解决运行下列语句即可解决 123sudo rm /var/cache/apt/archives/locksudo rm /var/lib/dpkg/locksudo dpkg --configure -a 出现缺少依赖关系解决执行下列语句后再安装 1sudo apt-get -f install">
-<meta name="keywords" content="ubuntu,linux">
+    <meta name="description" content="本质思想 注意力机制模型，借鉴了人的注意力机制，即读一段话或者看一张图片时，大脑对各部分有不同程度的关注来获取信息的重点。我们可以这样来看待Attention机制（参考上图）：将Source中的构成元素想象成是由一系列的&amp;lt;Key,Value&amp;gt;数据对构成，此时给定Target中的某个元素Query，通过计算Query和各个Key的相似性或者相关性，得到每个Key对应Value的权重系数，">
+<meta name="keywords" content="机器学习，注意力机制，EncodeDecode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ubuntu修复指南">
-<meta property="og:url" content="http://yoursite.com/2018/07/11/ubuntu修复指南/index.html">
+<meta property="og:title" content="机器学习中的注意力机制">
+<meta property="og:url" content="http://yoursite.com/2018/07/23/机器学习中的注意力机制/index.html">
 <meta property="og:site_name" content="ScienceFantasy">
-<meta property="og:description" content="软件安装类出现Could not get lock /var/lib/dpkg/lock解决运行下列语句即可解决 123sudo rm /var/cache/apt/archives/locksudo rm /var/lib/dpkg/locksudo dpkg --configure -a 出现缺少依赖关系解决执行下列语句后再安装 1sudo apt-get -f install">
+<meta property="og:description" content="本质思想 注意力机制模型，借鉴了人的注意力机制，即读一段话或者看一张图片时，大脑对各部分有不同程度的关注来获取信息的重点。我们可以这样来看待Attention机制（参考上图）：将Source中的构成元素想象成是由一系列的&amp;lt;Key,Value&amp;gt;数据对构成，此时给定Target中的某个元素Query，通过计算Query和各个Key的相似性或者相关性，得到每个Key对应Value的权重系数，">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-12T01:23:33.006Z">
+<meta property="og:image" content="https://t1.picb.cc/uploads/2018/07/23/JwCjU8.png">
+<meta property="og:image" content="https://t1.picb.cc/uploads/2018/07/23/JwCFgy.png">
+<meta property="og:updated_time" content="2018-07-23T08:45:47.109Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ubuntu修复指南">
-<meta name="twitter:description" content="软件安装类出现Could not get lock /var/lib/dpkg/lock解决运行下列语句即可解决 123sudo rm /var/cache/apt/archives/locksudo rm /var/lib/dpkg/locksudo dpkg --configure -a 出现缺少依赖关系解决执行下列语句后再安装 1sudo apt-get -f install">
+<meta name="twitter:title" content="机器学习中的注意力机制">
+<meta name="twitter:description" content="本质思想 注意力机制模型，借鉴了人的注意力机制，即读一段话或者看一张图片时，大脑对各部分有不同程度的关注来获取信息的重点。我们可以这样来看待Attention机制（参考上图）：将Source中的构成元素想象成是由一系列的&amp;lt;Key,Value&amp;gt;数据对构成，此时给定Target中的某个元素Query，通过计算Query和各个Key的相似性或者相关性，得到每个Key对应Value的权重系数，">
+<meta name="twitter:image" content="https://t1.picb.cc/uploads/2018/07/23/JwCjU8.png">
 
     
     <link rel="alternative" href="/atom.xml" title="ScienceFantasy" type="application/atom+xml">
@@ -89,14 +92,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2018/07/11/ubuntu修复指南/" title="ubuntu修复指南" itemprop="url">ubuntu修复指南</a>
+      <a href="/2018/07/23/机器学习中的注意力机制/" title="机器学习中的注意力机制" itemprop="url">机器学习中的注意力机制</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="QueenSAD" target="_blank" itemprop="author">QueenSAD</a>
 		
   <p class="article-time">
-    <time datetime="2018-07-11T01:25:37.000Z" itemprop="datePublished"> 发表于 2018-07-11</time>
+    <time datetime="2018-07-23T07:17:56.000Z" itemprop="datePublished"> 发表于 2018-07-23</time>
     
   </p>
 </header>
@@ -105,14 +108,14 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#软件安装类"><span class="toc-number">1.</span> <span class="toc-text">软件安装类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#出现Could-not-get-lock-var-lib-dpkg-lock解决"><span class="toc-number">1.1.</span> <span class="toc-text">出现Could not get lock /var/lib/dpkg/lock解决</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#出现缺少依赖关系解决"><span class="toc-number">1.2.</span> <span class="toc-text">出现缺少依赖关系解决</span></a></li></ol></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#本质思想"><span class="toc-number">1.</span> <span class="toc-text">本质思想</span></a></li></ol>
 		
 		</div>
 		
-		<h1 id="软件安装类"><a href="#软件安装类" class="headerlink" title="软件安装类"></a>软件安装类</h1><h2 id="出现Could-not-get-lock-var-lib-dpkg-lock解决"><a href="#出现Could-not-get-lock-var-lib-dpkg-lock解决" class="headerlink" title="出现Could not get lock /var/lib/dpkg/lock解决"></a>出现Could not get lock /var/lib/dpkg/lock解决</h2><p>运行下列语句即可解决</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo rm /var/cache/apt/archives/lock</span><br><span class="line">sudo rm /var/lib/dpkg/lock</span><br><span class="line">sudo dpkg --configure -a</span><br></pre></td></tr></table></figure>
-<h2 id="出现缺少依赖关系解决"><a href="#出现缺少依赖关系解决" class="headerlink" title="出现缺少依赖关系解决"></a>出现缺少依赖关系解决</h2><p>执行下列语句后再安装</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get -f install</span><br></pre></td></tr></table></figure>  
+		<h1 id="本质思想"><a href="#本质思想" class="headerlink" title="本质思想"></a>本质思想</h1><p><img src="https://t1.picb.cc/uploads/2018/07/23/JwCjU8.png" alt="注意力机制本质模型"></p>
+<p>注意力机制模型，借鉴了人的注意力机制，即读一段话或者看一张图片时，大脑对各部分有不同程度的关注来获取信息的重点。我们可以这样来看待Attention机制（参考上图）：将Source中的构成元素想象成是由一系列的&lt;Key,Value&gt;数据对构成，此时给定Target中的某个元素Query，通过计算Query和各个Key的相似性或者相关性，得到每个Key对应Value的权重系数，然后对Value进行加权求和，即得到了最终的Attention数值。所以本质上Attention机制是对Source中元素的Value值进行加权求和，而Query和Key用来计算对应Value的权重系数。即可以将其本质思想改写为如下公式：</p>
+<p><img src="https://t1.picb.cc/uploads/2018/07/23/JwCFgy.png" alt="注意力本质思想公式表示"></p>
+  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
@@ -120,7 +123,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/ubuntu/">ubuntu</a><a href="/tags/linux/">linux</a>
+  <span></span> <a href="/tags/机器学习，注意力机制，EncodeDecode/">机器学习，注意力机制，EncodeDecode</a>
   </div>
 
 </div>
@@ -129,7 +132,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2018/07/11/ubuntu修复指南/" data-title="ubuntu修复指南 | ScienceFantasy" data-tsina="" class="share clearfix">
+	  <div data-url="http://yoursite.com/2018/07/23/机器学习中的注意力机制/" data-title="机器学习中的注意力机制 | ScienceFantasy" data-tsina="" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -142,19 +145,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2018/07/17/元学习/" title="元学习">
-  <strong>上一篇：</strong><br/>
-  <span>
-  元学习</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2018/07/10/添加hexo站内搜索的正确姿势/"  title="添加hexo站内搜索的正确姿势">
+<a href="/2018/07/17/元学习/"  title="元学习">
  <strong>下一篇：</strong><br/> 
- <span>添加hexo站内搜索的正确姿势
+ <span>元学习
 </span>
 </a>
 </div>
@@ -171,7 +166,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#软件安装类"><span class="toc-number">1.</span> <span class="toc-text">软件安装类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#出现Could-not-get-lock-var-lib-dpkg-lock解决"><span class="toc-number">1.1.</span> <span class="toc-text">出现Could not get lock /var/lib/dpkg/lock解决</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#出现缺少依赖关系解决"><span class="toc-number">1.2.</span> <span class="toc-text">出现缺少依赖关系解决</span></a></li></ol></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#本质思想"><span class="toc-number">1.</span> <span class="toc-text">本质思想</span></a></li></ol>
  
   </div>
 

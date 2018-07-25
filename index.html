@@ -86,6 +86,63 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2018/07/23/机器学习中的注意力机制/" title="机器学习中的注意力机制" itemprop="url">机器学习中的注意力机制</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="QueenSAD" target="_blank" itemprop="author">QueenSAD</a>
+		
+  <p class="article-time">
+    <time datetime="2018-07-23T07:17:56.000Z" itemprop="datePublished"> 发表于 2018-07-23</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h1 id="本质思想"><a href="#本质思想" class="headerlink" title="本质思想"></a>本质思想</h1><p><img src="https://t1.picb.cc/uploads/2018/07/23/JwCjU8.png" alt="注意力机制本质模型"></p>
+<p>注意力机制模型，借鉴了人的注意力机制，即读一段话或者看一张图片时，大脑对各部分有不同程度的关注来获取信息的重点。我们可以这样来看待Attention机制（参考上图）：将Source中的构成元素想象成是由一系列的&lt;Key,Value&gt;数据对构成，此时给定Target中的某个元素Query，通过计算Query和各个Key的相似性或者相关性，得到每个Key对应Value的权重系数，然后对Value进行加权求和，即得到了最终的Attention数值。所以本质上Attention机制是对Source中元素的Value值进行加权求和，而Query和Key用来计算对应Value的权重系数。即可以将其本质思想改写为如下公式：</p>
+<p><img src="https://t1.picb.cc/uploads/2018/07/23/JwCFgy.png" alt="注意力本质思想公式表示"></p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/机器学习，注意力机制，EncodeDecode/">机器学习，注意力机制，EncodeDecode</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2018/07/17/元学习/" title="元学习" itemprop="url">元学习</a>
   </h1>
   <p class="article-author">By
@@ -283,6 +340,7 @@
 <p>示例代码<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="comment">#批量重命名文件</span></span><br><span class="line">workdir=<span class="string">'./Data/'</span></span><br><span class="line">tag=<span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> root,dirnames,filenames <span class="keyword">in</span> os.walk(workdir):</span><br><span class="line">    <span class="keyword">for</span> name <span class="keyword">in</span> filenames:</span><br><span class="line">        filepath=os.path.join(root,name)</span><br><span class="line">        newname=os.path.join(root,str(tag).zfill(<span class="number">6</span>)+<span class="string">".jpeg"</span>)</span><br><span class="line">        os.rename(filepath,newname)</span><br><span class="line">        tag+=<span class="number">1</span></span><br></pre></td></tr></table></figure></p>
 <h1 id="元素分解"><a href="#元素分解" class="headerlink" title="元素分解"></a>元素分解</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">data=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]</span><br><span class="line">head,*midle,tail=data <span class="comment">#通过*来忽略中间元素只取头和尾</span></span><br><span class="line">*_,tail=data <span class="comment">#也可以通过_来对元素进行丢弃</span></span><br><span class="line">print(tail)</span><br></pre></td></tr></table></figure>
 <h1 id="优先队列"><a href="#优先队列" class="headerlink" title="优先队列"></a>优先队列</h1><p>可以利用heapq实现<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> heapq</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">PriorityQueue</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">_init_</span><span class="params">(self)</span>:</span></span><br><span class="line">        self._queue=[]</span><br><span class="line">        self._index=<span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">push</span><span class="params">(self,item,priority)</span>:</span></span><br><span class="line">        heapq.heappush(self._queue,(-priority,self._index,item))</span><br><span class="line">        self._index+=<span class="number">1</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">pop</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> heapq.heappop(self._queue)[<span class="number">-1</span>]</span><br></pre></td></tr></table></figure></p>
+<h1 id="获取特定文件路径"><a href="#获取特定文件路径" class="headerlink" title="获取特定文件路径"></a>获取特定文件路径</h1><p>用glob可以很方便<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># *:匹配所有字符</span></span><br><span class="line"><span class="comment"># ？：匹配一个字符</span></span><br><span class="line"><span class="comment"># *.*: 匹配如[A.jpeg,B.text,CD.avi]</span></span><br><span class="line"><span class="comment"># ？？？.* 匹配如[123.jepg, 321.txt]</span></span><br><span class="line"><span class="keyword">import</span> glob</span><br><span class="line">path_to_images=<span class="string">'images/'</span></span><br><span class="line">all_files = glob.glob(path_to_images+<span class="string">'*'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 集合数据枚举函数enumerate</span></span><br><span class="line"><span class="keyword">for</span> i, image_file <span class="keyword">in</span> enumerate(all_images):</span><br><span class="line">    im = Image.open(image_file)</span><br><span class="line">    im = im.resize((<span class="number">84</span>, <span class="number">84</span>), resample=Image.LANCZOS)</span><br><span class="line">    im.save(image_file)</span><br><span class="line">    <span class="keyword">if</span> i % <span class="number">500</span> == <span class="number">0</span>:</span><br><span class="line">        print(i)</span><br></pre></td></tr></table></figure></p>
 
         
         
@@ -343,11 +401,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/ubuntu/" title="ubuntu">ubuntu<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/linux/" title="linux">linux<sup>1</sup></a></li>
+				<li><a href="/tags/python/" title="python">python<sup>1</sup></a></li>
 			
 		
 			
@@ -363,11 +417,19 @@
 			
 		
 			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
+				<li><a href="/tags/ubuntu/" title="ubuntu">ubuntu<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/python/" title="python">python<sup>1</sup></a></li>
+				<li><a href="/tags/linux/" title="linux">linux<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/机器学习，注意力机制，EncodeDecode/" title="机器学习，注意力机制，EncodeDecode">机器学习，注意力机制，EncodeDecode<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
 			
 		
 		</ul>
